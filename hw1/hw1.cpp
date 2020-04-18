@@ -57,9 +57,9 @@ int main(void)
 	// Dark blue background
 	glClearColor(0.9f, 0.9f, 0.5f, 0.0f);
 
-	// Включить тест глубины
+	// Г‚ГЄГ«ГѕГ·ГЁГІГј ГІГҐГ±ГІ ГЈГ«ГіГЎГЁГ­Г»
 	glEnable(GL_DEPTH_TEST);
-	// Фрагмент будет выводиться только в том, случае, если он находится ближе к камере, чем предыдущий
+	// Г”Г°Г ГЈГ¬ГҐГ­ГІ ГЎГіГ¤ГҐГІ ГўГ»ГўГ®Г¤ГЁГІГјГ±Гї ГІГ®Г«ГјГЄГ® Гў ГІГ®Г¬, Г±Г«ГіГ·Г ГҐ, ГҐГ±Г«ГЁ Г®Г­ Г­Г ГµГ®Г¤ГЁГІГ±Гї ГЎГ«ГЁГ¦ГҐ ГЄ ГЄГ Г¬ГҐГ°ГҐ, Г·ГҐГ¬ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГЁГ©
 	glDepthFunc(GL_LESS);
 
 	GLuint VertexArrayID;
@@ -75,7 +75,7 @@ int main(void)
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixIDB = glGetUniformLocation(programIDB, "MVP");
 
-	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
+	// Projection matrix : 45В° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
 	glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
 
 	// Model matrix : an identity matrix (model will be at the origin)
